@@ -1,0 +1,40 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-googlemaps": {
+            "PACKAGE_NAME": "com.MichelDR.Sangre"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.MichelDR.Sangre"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.phonegap.massangre"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.MichelDR.Sangre"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.MichelDR.Sangre"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.MichelDR.Sangre"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.MichelDR.Sangre"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.MichelDR.Sangre"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.MichelDR.Sangre"
+        }
+    }
+}

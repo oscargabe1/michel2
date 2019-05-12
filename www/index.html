@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <meta http-equiv=“Content-Security-Policy” content= “default-src script-src ‘self’ ‘unsafe-inline’ ‘unsafe-eval’ ; style-src ‘self’ ‘unsafe-inline’ ; img-src data: ‘unsafe-inline’”>
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <title>TopKek</title>
+    </head>
+    <body style="background-image: url('images/fondo-login.png');">
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+
+        <div class="row">
+            <div class="col s12 m5">
+            <br>
+
+            <center>
+                <img src="images/Logotipo App gris.png" alt="" style="height: 70%; width: 70%;">
+            </center>
+
+            <br>
+
+              <div class="card-panel">
+                <div class="row">
+                    <form class="col s12">
+                        <br>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input id="icon_prefix email" type="text" class="validate">
+                                <label for="icon_prefix email">Usuario</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">lock</i>
+                                <input id="icon_prefix contraseña" type="password" class="validate">
+                                <label for="icon_prefix contraseña">Contraseña</label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="divider"></div>
+                        <br>
+                          <div class="col s10 center-align offset-s1">
+                          <ul>
+                          <a href="Principal.html" class="waves-effect waves-light btn-large red darken-4">Iniciar Sesión</a>
+                          </ul>
+                        </div>
+                    </form>
+                </div>
+              </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css"  media="screen,projection"/>
+        <title>TopKek</title>
+    </head>
+    <body style="background-color: #E5E5E5">
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="../../js/materialize.min.js"></script>
+
+  <div class="navbar-fixed">
+  <nav style="background-color: #c62828">
+        <div class="nav-wrapper">
+      <center><a href="#!" class="brand-logo"><img src="../../images/Logotipo App gris.png" style="height: 60%; width: 60%; margin-top: 9px"></a></center>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  </div>
+
+  <ul class="sidenav" id="mobile-demo">
+<!--     <li><a href="RegistroDonador.html"><i class="material-icons">note_add</i>Registrar Donador</a></li>
+    <li><a href="#"><i class="material-icons">search</i>Buscar Donador</a></li>
+    <li><a href="mapita.html"><i class="material-icons">location_on</i>Bancos de Sangre</a></li>
+    <li><a  href="Informacion.html"><i class="material-icons">info</i>Información General</a></li> -->
+    <li><div class="user-view">
+      <div class="background">
+        <img src="../../images/donar-sangre.png">
+      </div>
+      <a href="#name"><span class="white-text name">&nbsp;</span></a>
+      <a href="#email"><span class="white-text email">&nbsp;</span></a>
+    </div></li>
+    <li><a href="../../Principal.html"><i class="material-icons">home</i>Inicio</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Opciones</a></li>
+    <li><a class="waves-effect" href="../../SeleccionRegistro.html"><i class="material-icons">note_add</i>Registro de Usuarios</a></li>
+    <li><a class="waves-effect" href="../../SeleccionBusqueda.html"><i class="material-icons">search</i>Busqueda de Usuarios</a></li>
+    <li><a class="waves-effect" href="../../mapita.html"><i class="material-icons">location_on</i>Bancos de Sangre</a></li>
+    <li><a class="waves-effect" href="../../Informacion.html"><i class="material-icons">info</i>Información General</a></li>
+    <br>
+    <br>
+    <li><div class="divider"></div></li>
+    <li><a href="index.html" class="waves-effect" href="index.html"><i class="material-icons">exit_to_app</i>Salir</a></li>
+  </ul>
+
+    <div class="row">
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="../../images/solicitantes_on.png">
+        </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="row">
+    <div id="contenedor" class="col s12 m7">
+
+    </div>
+  </div>
+
+<script>
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+    $('select').formSelect();
+  });
+</script>
+
+<script>
+$.ajax({
+
+    url: 'http://niwadub.pythonanywhere.com/lista-usuarios/?categoria=Solicitante&tipo=O-',
+
+    success: function(respuesta) {
+
+        $(respuesta).each(function(respuesta, el) {
+          $('#contenedor').append('<div class="card"><div class="card-content"><p><b>Nombre: </b>'+this.nombre+'</p><p><b>Categoria: </b>'+this.categoria+'</p><p><b>Tipo: </b>O-</p><p><b>Sexo Asignado: </b>'+this.sexo+'</p><p><b>Teléfono: </b>'+this.telefono+'</p><p><b>Email: </b>'+this.email+'</p><p><b>Centro Preferido: </b>'+this.centro+'</p></div></div>');
+          console.log(respuesta);
+
+        });
+
+        M.toast({html: '¡Busqueda exitosa!'})
+    },
+
+    error: function() {
+
+        M.toast({html: 'Ocurrio un error, no es posible mostrar la información'})
+
+    }
+
+});
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+        <title>TopKek</title>
+    </head>
+    <body style="background-color: #E5E5E5">
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.js"></script>
+
+
+<!--   <nav>
+    <div class="nav-wrapper red accent-4">
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="side-nav" id="mobile-demo">
+      <li><div class="userView">
+      <div class="background">
+        <img src="images/background.jpg">
+      </div>
+      <a href="Principal.html"><img class="circle" src="images/nico.jpg"></a>
+      <a href="#!name"><span class="white-text name">Nico Yazawa</span></a>
+      <a href="#!email"><span class="white-text email">niconico@nii.com</span></a>
+      </div></li>
+        <li><a href="RegistroDonador.html"><i class="material-icons">note_add</i>Registrar Donador</a></li>
+        <li><a href="#"><i class="material-icons">search</i>Buscar Donador</a></li>
+        <li><a href="mapita.html"><i class="material-icons">location_on</i>Bancos de Sangre</a></li>
+        <li><a  href="Informacion.html"><i class="material-icons">info</i>Información General</a></li>
+      </ul>
+    </div>
+  </nav> -->
+
+
+  <div class="navbar-fixed">
+  <nav style="background-color: #c62828">
+        <div class="nav-wrapper">
+      <center><a href="#!" class="brand-logo"><img src="images/Logotipo App gris.png" style="height: 60%; width: 60%; margin-top: 9px"></a></center>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  </div>
+
+  <ul class="sidenav" id="mobile-demo">
+<!--     <li><a href="RegistroDonador.html"><i class="material-icons">note_add</i>Registrar Donador</a></li>
+    <li><a href="#"><i class="material-icons">search</i>Buscar Donador</a></li>
+    <li><a href="mapita.html"><i class="material-icons">location_on</i>Bancos de Sangre</a></li>
+    <li><a  href="Informacion.html"><i class="material-icons">info</i>Información General</a></li> -->
+    <li><div class="user-view">
+      <div class="background">
+        <img src="images/donar-sangre.png">
+      </div>
+      <a href="#name"><span class="white-text name">&nbsp;</span></a>
+      <a href="#email"><span class="white-text email">&nbsp;</span></a>
+    </div></li>
+    <li><a href="Principal.html"><i class="material-icons">home</i>Inicio</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Opciones</a></li>
+    <li><a class="waves-effect" href="SeleccionRegistro.html"><i class="material-icons">note_add</i>Registro de Usuarios</a></li>
+    <li><a class="waves-effect" href="SeleccionBusqueda.html"><i class="material-icons">search</i>Busqueda de Usuarios</a></li>
+    <li><a class="waves-effect" href="mapita.html"><i class="material-icons">location_on</i>Bancos de Sangre</a></li>
+    <li><a class="waves-effect" href="Informacion.html"><i class="material-icons">info</i>Información General</a></li>
+    <br>
+    <br>
+    <li><div class="divider"></div></li>
+    <li><a href="index.html" class="waves-effect" href="index.html"><i class="material-icons">exit_to_app</i>Salir</a></li>
+  </ul>
+
+  <br>
+  
+  <div class="row">
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/datos_generales.png">
+        </div>
+        <div class="card-content">
+
+          <p>La donación de sangre es una necesidad social en la que participamos todos, te brindamos la siguiente información para que tu también puedas ayudar</p>
+
+          <div class="row">
+            <ul class="collapsible">
+              <li>
+                <div class="collapsible-header"><i class="material-icons">local_hospital</i><strong>¿Qué necesito para poder donar sangre?</strong></div>
+                <div class="collapsible-body">
+                  <span>
+                    <p>Cada centro de donación tiene sus propios requerimientos, el <strong>IMSS</strong> menciona:</p>
+                    <br>
+                    <ul>
+                      <li><strong>1. </strong>Presentar identificación oficial con fotografía original y vigente.</li>
+                      <li><strong>2. </strong>Edad de 18 a 65 años.</li>
+                      <li><strong>3. </strong>Peso mayor de 50 kilos.</li>
+                      <li><strong>4. </strong>Ayuno mínimo de 4 horas (evite consumir alimentos con grasa 24 horas antes de la donación, incluyendo huevo, leche y sus derivados).</li>
+                      <li><strong>5. </strong>No exceder de 8 horas de ayuno.</li>
+                      <li><strong>6. </strong>No haber estado en tratamiento de endodoncia, acupuntura o haberse practicado tatuajes o perforaciones en los últimos 12 meses.</li>
+                      <li><strong>7. </strong>No haber sido operado en los últimos 6 meses.</li>
+                      <li><strong>8. </strong>No haberse vacunado en los últimos 30 días.</li>
+                      <li><strong>9. </strong>No haber ingerido bebidas alcohólicas en 72 horas previas a la donación.</li>
+                      <li><strong>10. </strong>No venir conduciendo motocicleta. (Puede sufrir mareos al conducir)</li>
+                      <li><strong>11. </strong>Si usted tienen la presión arterial alta y está controlado, podría  ser candidato a donación, siempre y cuando el médico de Banco de Sangre lo valore.</li>
+                      <li><strong>12. </strong>Disponer en promedio de 2 horas, tiempo aproximado que dura el proceso de la donación de sangre.</li>
+                    </ul>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">airline_seat_recline_normal</i><strong>¿Cuanta sangre me van a extraer?</strong></div>
+                <div class="collapsible-body"><span>De cada persona se extrae 450 ml de sangre (más menos 10%), esto no afecta la integridad del donador, por ello se solicita un peso mínimo de 52 kg para no afectar su volumen sanguíneo total.</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">sentiment_dissatisfied</i><strong>¿Duele donar sangre?</strong></div>
+                <div class="collapsible-body"><span>Es una mínima molestia. Tanto el material de extracción como el personal sanitario están especialmente preparados para causar el menor daño.</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">sentiment_very_satisfied</i><strong>¿A cuantas personas puede ayudar mi sangre?</strong></div>
+                <div class="collapsible-body"><span>De cada Unidad de Sangre obtenida (450 ml), esta se fracciona y se pueden obtener hasta 4 componentes de sangre (concentrados plaquetarios, concentrado eritrocitario, plasma fresco congelado y crioprecipitados), es decir <strong>un donador puede ayudar a 4 personas</strong>, dado que de cada donador se obtienen 4 componentes sanguíneos.</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">calendar_today</i><strong>¿Qué tan seguido puedo donar sangre?</strong></div>
+                <div class="collapsible-body"><span>Se puede donar sangre con un intervalo mínimo de 2 meses. Los hombres pueden donar hasta 4 veces en un año natural, y las mujeres 3. Esta diferencia no es discriminación, sino para compensar las pérdidas que tienen las mujeres por la regla.</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">verified_user</i><strong>¿Cómo se conserva la sangre donada?</strong></div>
+                <div class="collapsible-body">
+                  <span>
+                    <p>Cada componente de la sangre necesita unas condiciones diferentes para mantenerse en perfecto estado hasta el momento de su utilización:</p>
+                    <br>
+                    <ul>
+                      <li><strong>1. </strong>Glóbulos rojos: hasta 42 días a una temperatura de 4ºC.</li>
+                      <li><strong>2. </strong>Plaquetas: 7 días, en agitación, a una temperatura de 22ºC.</li>
+                      <li><strong>3. </strong>Plasma: hasta 2 años, congelado, a temperatura de –40ºC.</li>
+                    </ul>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">face</i><strong>¿Puedo donar sangre si tengo tatuajes o piercings?</strong></div>
+                <div class="collapsible-body"><span>Se tiene que dejar pasar 12 meses después del último procedimiento para poder donar.</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">face</i><strong>¿Puedo donar sangre si soy diabetico?</strong></div>
+                <div class="collapsible-body"><span>Solo si se es diabético con tratamiento de insulina, no se puede donar sangre, ya que la donación puede afectar al donante. En el caso de diabéticos tratados con dieta o antidiabéticos orales (pastillas) si pueden donar sangre.</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">face</i><strong>¿Puedo donar sangre si tengo hipertensión?</strong></div>
+                <div class="collapsible-body"><span>Sí, incluso si se esta tomando medicación: sólo deben estar correctos los niveles en el momento de la donación.</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">face</i><strong>¿Puedo donar sangre si tengo colesterol alto?</strong></div>
+                <div class="collapsible-body"><span>Si, se puede donar tranquilamente</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">facet</i><strong>¿Puedo donar sangre si tuve hepatitis?</strong></div>
+                <div class="collapsible-body"><span>Sí, en el caso de la Hepatitis A. Nunca en el de la hepatitis B ni en la C.</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">face</i><strong>¿Puedo donar sangre teniendo la regla?</strong></div>
+                <div class="collapsible-body"><span>Sí. Siempre y cuando la donante se encuentre bien.</span></div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+    $('.collapsible').collapsible();
+  });
+</script>
+
+    </body>
+</html>

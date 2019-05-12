@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+        <title>TopKek</title>
+    </head>
+    <body>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.js"></script>
+
+      <div class="navbar-fixed">
+  <nav style="background-color: #c62828">
+        <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Logo</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  </div>
+
+  <ul class="sidenav" id="mobile-demo">
+<!--     <li><a href="RegistroDonador.html"><i class="material-icons">note_add</i>Registrar Donador</a></li>
+    <li><a href="#"><i class="material-icons">search</i>Buscar Donador</a></li>
+    <li><a href="mapita.html"><i class="material-icons">location_on</i>Bancos de Sangre</a></li>
+    <li><a  href="Informacion.html"><i class="material-icons">info</i>Información General</a></li> -->
+    <li><div class="user-view">
+      <div class="background">
+        <img src="images/office.jpg">
+      </div>
+      <a href="#user"><img class="circle" src="images/yuna.jpg"></a>
+      <a href="#name"><span class="white-text name">John Doe</span></a>
+      <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div></li>
+    <li><a href="#!"><i class="material-icons">home</i>Inicio</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Opciones</a></li>
+    <li><a class="waves-effect" href="RegistroDonador.html"><i class="material-icons">note_add</i>Registrar Donador</a></li>
+    <li><a class="waves-effect" href="#"><i class="material-icons">search</i>Buscar Donador</a></li>
+    <li><a class="waves-effect" href="mapita.html"><i class="material-icons">location_on</i>Bancos de Sangre</a></li>
+    <li><a class="waves-effect" href="Informacion.html"><i class="material-icons">info</i>Información General</a></li>
+    <br>
+    <br>
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect" href="index.html"><i class="material-icons">exit_to_app</i>Salir</a></li>
+  </ul>  
+
+    <div id="register" class="col s12">
+        <form id="formulario" class="col s12" method="GET" action="http://www.donacion.onetecstudio.com/registrotopkek.php">
+            <div class="form-container">
+                <h3 class="red-text">Registro</h3>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="name" name="name" type="text" class="validate">
+                        <label for="name">Nombre</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="last_name" name="last_name" type="text" class="validate">
+                        <label for="last_name">Apellido Paterno</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="usuario" name="usuario" type="text" class="validate">
+                        <label for="email">Usuario</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" name="email" type="email" class="validate">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password" name="password" type="password" class="validate">
+                        <label for="password">Contraseña</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password2" name="password2" type="password" class="validate">
+                        <label for="password">Confirmar Contraseña</label>
+                    </div>
+                </div>
+                <div class="row">
+                <div class="input-field col s12">
+                    <select id="sexo" name="sexo">
+                      <option value="" disabled selected>Selecciona tu sexo</option>
+                      <option value="1">Masculino</option>
+                      <option value="2">Femenino</option>
+                    </select>
+                <label>Sexo</label>
+                </div>
+                </div>
+                <div class="row">
+                <div class="input-field col s12">
+                    <select id="sangrita" name="sangrita">
+                      <option value="" disabled selected>Selecciona tu tipo de sangre</option>
+                      <option value="1">O+</option>
+                      <option value="2">O-</option>
+                      <option value="3">A+</option>
+                      <option value="4">A-</option>
+                      <option value="5">B+</option>
+                      <option value="6">B-</option>
+                      <option value="7">AB+</option>
+                      <option value="8">AB-</option>
+                    </select>
+                <label>Tipo de sangre</label>
+                </div>
+                </div>
+                <div class="row">
+                    <ul>
+                    <button id="perro" class="btn waves-effect waves-light red darken-4 col s8 push-s2" type="submit" name="action">Enviar
+                    <i class="material-icons right">send</i>
+                    </button>
+                    </ul>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+<!-- <script type="text/javascript">
+
+            function EnviarDatos(){
+
+                $('#perro').submit(function(event)){
+
+                var name1 = $("#name").val();
+                var last_name1 = $("#last_name").val();
+                var usuario1 = $("#usuario").val();
+                var email1 = $("#email").val();
+                var password1 = $("#password").val();
+                var password21 = $("#password2").val();
+                var sexo1 = $("#sexo").val();
+                var sangrita1 = $("#sangrita").val();
+                var toastexito = $('<span>El registro se realizo con exito</span>');
+                var toastrekt = $('<span>Hubo un error en el registro, intentalo denuevo</span>');
+                var info = 'name='+ name1 + '&last_name='+last_name1+'&usuario='+usuario1+'&email='+email1+'&password='+password1+'&password2'+password21+'&sexo='+sexo1+'&sangrita='+sangrita1;
+
+                
+                $.ajax({
+                    type: 'GET',
+                    url: 'http://www.donacion.onetecstudio.com/registrotopkek.php',
+                    data: (info),
+                    dataType: 'text',
+                    success: function(respuesta){
+                        if (respuesta=="1"){
+                            Materialize.toast(toastexito, 5000);
+                        }
+                        else if (respuesta=="2")
+                        {
+                            Materialize.toast(toastrekt, 5000);
+                        }
+                    }
+                })
+
+                }
+            }
+
+        </script> -->
+<script>
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+</script>
+
+    </body>
+</html>
+
